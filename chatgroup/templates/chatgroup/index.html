@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scikitlearn</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            margin-top: 3%;
+            background:linear-gradient(90pip helpdeg,#6c5ce7,#f368e0,#f9ca24,#e056fd,#6c5ce7) ;
+            background-size: 400%;
+            animation: animate 8s linear infinite;
+        }
+
+        @keyframes animate{
+            0%{
+                background-position: 0%;
+            }
+            100%{
+                background-position: 400%;
+            }
+        }
+
+
+
+        .btn {
+            margin-top: 10px;
+        }
+
+        .card {
+            top: 20%;
+            background-color: #2d3436;
+            color: #ffffff;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <h3 for="exampleFormControlTextarea1">การวิเคราะห์บทสนทนา</h3>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="chat"></textarea>
+                    <button type="submit" class="btn btn-primary">วิเคราะห์</button>
+                    <h4>หมวดหมู่ : {{ label }}</h4>
+                    <h4>ความแม่นยำ : {{ Percent }}</h4>
+                </div>
+            </form>
+
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">sci.electronics</h3>
+                            <p class="card-text"> Actually, fossil fuel plants run hotter than the usual
+                                boiling-water reactor nuclear plants. (There's a gripe in the industry
+                                that nuclear power uses 1900 vintage steam technology). So it's
+                                more important in nuclear plants to get the cold end of the system
+                                as cold as possible. Hence big cooling towers. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">rec.sport.baseball</h3>
+                            <p class="card-text">I think this guy is going to be just a little bit disappointed. Lemieux
+                                two, Tocchet, Mullen, Tippett, and Jagr. I buzzed my friend because I forgot
+                                who had scored Mullen's goal. I said, "Who scored? Lemieux two, Tocchet,
+                                Tippett, Jagr." The funny part was I said the "Jagr" part non-chalantly as
+                                he was in the process of scoring while I was asking this question!!! :-)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">rec.autos</h3>
+                            <p class="card-text">I was wondering if anyone out there could enlighten me on this car I
+                                saw
+                                the other day. It was a 2-door sports car, looked to be from the late 60s/
+                                early 70s. It was called a Bricklin. The doors were really small. In addition,
+                                the front bumper was separate from the rest of the body. This is
+                                all I know. If anyone can tellme a model name, engine specs, years
+                                of production, where this car is made, history, or whatever info you
+                                have on this funky looking car, please e-mail.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">rec.motorcycles</h3>
+                            <p class="card-text">I have a line on a Ducati 900GTS 1978 model with 17k on the clock. Runs
+                                very well, paint is the bronze/brown/orange faded out, leaks a bit of oil
+                                and pops out of 1st with hard accel. The shop will fix trans and oil
+                                leak. They sold the bike to the 1 and only owner. They want $3495, and
+                                I am thinking more like $3K. Any opinions out there? Please email me.
+                                Thanks. It would be a nice stable mate to the Beemer. Then I'll get
+                                a jap bike and call myself Axis Motors!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
